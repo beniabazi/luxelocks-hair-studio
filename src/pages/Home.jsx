@@ -112,20 +112,17 @@ const Home = () => {
         <SectionTitle>Our Services</SectionTitle>
         <ServiceCardsWrapper>
           <ServiceCard
-            image
-            src={haircutImg}
+            image={haircutImg}
             title="Haircuts & Styling"
             description="Precision cuts and stunning styles."
           />
           <ServiceCard
-            image
-            src={colouringImg}
+            image={colouringImg}
             title="Hair Coloring"
             description="Vibrant colors and expert application."
           />
           <ServiceCard
-            image
-            src={bridalImg}
+            image={bridalImg}
             title="Bridal & Event Hair"
             description="Elegant looks for your special day."
           />
