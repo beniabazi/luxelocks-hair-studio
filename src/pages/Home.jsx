@@ -140,6 +140,7 @@ const Home = () => {
           <GalleryImage src={haircutImg} alt="Instagram post" />
           <GalleryImage src={hairstyleImg} alt="Instagram post" />
           <GalleryImage src={dryingImg} alt="Instagram post" />
+          <GalleryImage src={hairwashImg} alt="Instagram post" />
         </GalleryGrid>
       </InstagramGalleryContainer>
     </PageWrapper>
