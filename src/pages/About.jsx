@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import equipmentImg from '../assets/images/equipment.png';  // adjust path relative to the component file
+import ownerImg from '../assets/images/owner.png';  // adjust path relative to the component file
+
 
 const AboutContainer = styled.div`
   padding: 4rem 2rem;
@@ -55,7 +58,7 @@ const About = () => {
     <AboutContainer>
       <Title>About LuxeLocks</Title>
       <Section>
-        <Image src="https://picsum.photos/seed/salon/400/400" alt="Salon Interior" />
+        <Image src={equipmentImg} alt="Salon Interior" />
         <TextContent>
           <Subtitle>Our Philosophy</Subtitle>
           <Paragraph>
@@ -70,7 +73,7 @@ const About = () => {
             Jane Doe, the founder of LuxeLocks, has been a leading figure in the beauty industry for over 15 years. Her vision was to create a salon that not only offers exceptional services but also provides a welcoming and relaxing environment for clients to unwind and feel pampered.
           </Paragraph>
         </TextContent>
-        <Image src="https://picsum.photos/seed/founder/400/400" alt="Founder" />
+        <Image src={ownerImg} alt="Founder" />
       </Section>
     </AboutContainer>
   );
