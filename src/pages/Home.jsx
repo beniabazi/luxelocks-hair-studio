@@ -1,8 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
-import ServiceCard from '../components/ServiceCard';
-import Testimonials from '../components/Testimonials';
+import React from "react";
+import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import ServiceCard from "../components/ServiceCard";
+import Testimonials from "../components/Testimonials";
+import blowdryImg from "../assets/images/blowdry.png"; // adjust path relative to the component file
+import bridalImg from "../assets/images/bridal.png"; // adjust path relative to the component file
+import colouringImg from "../assets/images/colouring.png"; // adjust path relative to the component file
+import dryingImg from "../assets/images/drying.png"; // adjust path relative to the component file
+import hairwashImg from "../assets/images/hair_wash.png"; // adjust path relative to the component file
+import haircutImg from "../assets/images/haircut.png"; // adjust path relative to the component file
+import hairstyleImg from "../assets/images/hairstyle.png"; // adjust path relative to the component file
+import stylingImg from "../assets/images/styling.png"; // adjust path relative to the component file
+import styling_2Img from "../assets/images/styling_2.png"; // adjust path relative to the component file
+import washImg from "../assets/images/wash.png"; // adjust path relative to the component file
 
 const InstagramGalleryContainer = styled.section`
   padding: 4rem 2rem;
@@ -32,7 +42,9 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+      no-repeat center center/cover;
   color: #fff;
   text-align: center;
 `;
@@ -92,25 +104,28 @@ const Home = () => {
         <Tagline>Luxe Beauty. Personal Touch.</Tagline>
         <Subtitle>Experience the art of beautiful hair.</Subtitle>
         <ButtonContainer>
-          <Button onClick={() => navigate('/booking')}>Book Appointment</Button>
-          <Button onClick={() => navigate('/services')}>View Services</Button>
+          <Button onClick={() => navigate("/booking")}>Book Appointment</Button>
+          <Button onClick={() => navigate("/services")}>View Services</Button>
         </ButtonContainer>
       </HeroContainer>
       <ServicesPreviewContainer>
         <SectionTitle>Our Services</SectionTitle>
         <ServiceCardsWrapper>
           <ServiceCard
-            image="https://picsum.photos/seed/haircut/400/400"
+            image
+            src={haircutImg}
             title="Haircuts & Styling"
             description="Precision cuts and stunning styles."
           />
           <ServiceCard
-            image="https://picsum.photos/seed/coloring/400/400"
+            image
+            src={colouringImg}
             title="Hair Coloring"
             description="Vibrant colors and expert application."
           />
           <ServiceCard
-            image="https://picsum.photos/seed/bridal/400/400"
+            image
+            src={bridalImg}
             title="Bridal & Event Hair"
             description="Elegant looks for your special day."
           />
@@ -120,12 +135,14 @@ const Home = () => {
       <InstagramGalleryContainer>
         <SectionTitle>Follow Us on Instagram</SectionTitle>
         <GalleryGrid>
-          <GalleryImage src="https://picsum.photos/seed/insta1/400/400" alt="Instagram post" />
-          <GalleryImage src="https://picsum.photos/seed/insta2/400/400" alt="Instagram post" />
-          <GalleryImage src="https://picsum.photos/seed/insta3/400/400" alt="Instagram post" />
-          <GalleryImage src="https://picsum.photos/seed/insta4/400/400" alt="Instagram post" />
-          <GalleryImage src="https://picsum.photos/seed/insta5/400/400" alt="Instagram post" />
-          <GalleryImage src="https://picsum.photos/seed/insta6/400/400" alt="Instagram post" />
+          <GalleryImage src={washImg} alt="Instagram post" />
+          <GalleryImage src={blowdryImg} alt="Instagram post" />
+          <GalleryImage src={dryingImg} alt="Instagram post" />
+          <GalleryImage src={stylingImg} alt="Instagram post" />
+          <GalleryImage src={styling_2Img} alt="Instagram post" />
+          <GalleryImage src={haircutImg} alt="Instagram post" />
+          <GalleryImage src={hairstyleImg} alt="Instagram post" />
+          <GalleryImage src={dryingImg} alt="Instagram post" />
         </GalleryGrid>
       </InstagramGalleryContainer>
     </PageWrapper>
